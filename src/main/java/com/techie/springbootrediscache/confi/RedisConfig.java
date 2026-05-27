@@ -24,8 +24,10 @@ public class RedisConfig {
                                 new Jackson2JsonRedisSerializer<>(ProductDto.class)
                         ));
 
-return RedisCacheManager.builder(connectionFactory)
+ return RedisCacheManager.builder(connectionFactory)
         .cacheDefaults(redisCacheConfiguration)
         .build();
     }
+
+
 }
